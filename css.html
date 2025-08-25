@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS — ePortfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Nischal Acharya — ePortfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="fullstack.html">Full Stack</a></li>
+        <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+        <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+        <li class="nav-item"><a class="nav-link" href="bootstrap.html">Bootstrap</a></li>
+        <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="py-5">
+  <div class="container">
+
+  <h2 class="mb-4">CSS — Presentation and Layout</h2>
+  <p>CSS (Cascading Style Sheets) controls visual presentation. The <strong>cascade</strong>, <strong>specificity</strong>, and <strong>inheritance</strong> determine which rules apply. Modern layout uses <strong>Flexbox</strong> and <strong>Grid</strong>; responsive design uses relative units and media queries.</p>
+
+  <div class="row g-4 my-4">
+    <div class="col-lg-6">
+      <div class="card card-invert h-100">
+        <div class="card-body">
+          <h5 class="card-title">Selectors & Specificity</h5>
+<pre><code>/* Type, class, id */
+p { line-height: 1.6; }
+.note { color: #333; }
+#highlight { background: #000; color:#fff; }
+
+/* Attribute & pseudo-classes */
+input[type="email"]:focus { outline: 2px solid #000; }
+
+/* Specificity tips: prefer classes over ids for reusable styling */
+</code></pre>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card card-invert h-100">
+        <div class="card-body">
+          <h5 class="card-title">Flexbox & Grid</h5>
+<pre><code>/* Flexbox */
+.container { display:flex; gap:1rem; flex-wrap:wrap; }
+.item { flex: 1 1 240px; }
+
+/* Grid */
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Responsive Techniques</h3>
+<pre><code>@media (max-width: 768px) {
+  .sidebar { display:none; }
+  .hero { padding: 1rem; }
+}
+</code></pre>
+
+  <p>This site uses a clean black‑and‑white theme (≈80% white background with black accents) and Bootstrap utilities for quick responsiveness.</p>
+
+  <div class="mt-4">
+    <a href="index.html" class="btn btn-outline-ink">Back to Home</a>
+  </div>
+
+  </div>
+</main>
+<footer class="border-top py-4 bg-white">
+  <div class="container small d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+    <span>© 2025 Nischal Acharya — CET138 ePortfolio</span>
+    <span>Built with HTML, CSS, Bootstrap & JavaScript.</span>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

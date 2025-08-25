@@ -1,0 +1,63 @@
+
+:root{
+  --ink:#111;          /* black accents */
+  --paper:#fff;        /* 80% white theme */
+  --muted:#6c757d;
+}
+html,body{background:var(--paper); color:#111;}
+a{color:var(--ink); text-decoration: underline;}
+a:hover{text-decoration: none;}
+/* Card style: black background, white text per requirement */
+.card.card-invert{
+  background: var(--ink);
+  color: #fff;
+  border: 1px solid #000;
+}
+.card.card-invert .btn{
+  background:#fff;
+  color:#000;
+  border:0;
+}
+.card.card-invert .btn:hover{
+  filter: invert(1);
+}
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+}
+pre {
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  padding: 1rem;
+  border-radius: .75rem;
+  overflow-x: auto;
+}
+/* Simple hero */
+.hero{
+  border: 2px solid #000;
+  border-radius: 1.25rem;
+  background: #fff;
+  padding: clamp(1rem, 2vw, 2rem);
+}
+.badge-pill{
+  border-radius: 999px;
+  background: #000;
+  color:#fff;
+  padding:.35rem .75rem;
+}
+/* ToDo styles */
+.todo-app .todo-item{
+  display:flex; align-items:center; gap:.75rem;
+  border-bottom:1px dashed #000;
+  padding:.5rem 0;
+}
+.todo-app .todo-item.completed .todo-text{
+  text-decoration: line-through;
+  color: var(--muted);
+}
+.btn-outline-ink{
+  color:#000; border:1px solid #000; background:#fff;
+}
+.btn-outline-ink:hover{
+  background:#000; color:#fff;
+}
